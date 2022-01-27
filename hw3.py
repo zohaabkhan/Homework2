@@ -52,3 +52,50 @@ lst.append(l3)
 print(lst)
 
 #Q5
+
+def list_of_string(filename):
+    with open('sample2.csv') as f:
+        my_list = []
+        contents = f.readlines()
+        my_list.append(contents)
+        return my_list
+print("5:", list_of_string('sample2.csv'))
+
+#Q6
+def input_numbers():
+
+    a = float(input("Enter first number:"))
+    b = float(input("Enter second number:"))
+    return a, b
+
+
+x, y = input_numbers()
+
+while True:
+
+    if y != 0:
+
+        print(f"{x} / {y} is {x/y}")
+        break
+
+    else:
+
+        print("Cannot divide by zero")
+        x, y = input_numbers()
+
+#Q7
+test_list = [1, 3, 5, 6, 3, 5, 6, 1]
+print ("The original list is : " +  str(test_list))
+  
+
+res = []
+for i in test_list:
+    if i not in res:
+        res.append(i)
+  
+print ("The list after removing duplicates : " + str(res))
+
+#Q8
+import os
+
+os.mkdir('hw3-folder') 
